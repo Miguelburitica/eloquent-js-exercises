@@ -80,7 +80,7 @@ class VillageState {
   }
 }
 
-function runRobot (state: VillageState, robot: (state: VillageState, memory?: any) => { direction: string, memory?: any }, memory?: any) {
+function runRobot (state: VillageState, robot: (state: VillageState, memory?: string[]) => { direction: string, memory?: string[] }, memory?: string[]) {
   for (let turn = 0;; turn++) {
     if (state.parcels.length === 0) {
       console.log(`Done in ${turn} turns`);
